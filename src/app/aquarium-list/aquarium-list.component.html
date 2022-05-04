@@ -1,0 +1,6 @@
+<h5 class="center-align">
+  List of Aquariums
+</h5>
+<app-new-aquarium></app-new-aquarium>
+<app-aqurium *ngFor="let aquarium of aquariums; let i=index" [aquarium]="aquarium" [aquIndex]="i">
+</app-aqurium>

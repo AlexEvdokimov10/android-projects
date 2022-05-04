@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col m3 s6 offset-m3 center-align">
+    <h5>{{aquarium.number}}</h5>
+  </div>
+  <div class="col m3 s6 center-align">
+    <a class="btn-floating waves-effect waves-light blue" (click)="showInfo=!showInfo">
+      <i *ngIf="showInfo" class="material-icons">
+        keyboard_arrow_up
+      </i>
+      <i *ngIf="!showInfo" class="material-icons">
+        keyboard_arrow_down
+      </i>
+    </a>
+  </div>
+
+<div class="row info" *ngIf="showInfo">
+  <div class="col m6 offset-m3 s12">
+  <div class="input-field">
+    <input id="number" [ngModel]="aquarium.number" type="text" class="validate">
+  </div>
+</div>
+  <div class="col m6 offset-m3 s12">
+    <div class="input-field">
+      <input id="form" [ngModel]="aquarium.form" type="text" class="validate">
+    </div>
+  </div>
+  <div class="col m6 offset-m3 s12">
+    <div class="input-field">
+      <input id="size" [ngModel]="aquarium.size" type="text" class="validate">
+    </div>
+
+  </div>
+  <div class="col m6 offset-m3 s12">
+    <div class="input-field">
+      <input id="isBackLight" [ngModel]="aquarium.isBackLight" type="text" class="validate">
+    </div>
+
+  </div>
+  <a class="rem-row btn-floating waves-effect waves-light red" (click)="delAquarium()">
+    <i class="material-icons">
+      delete
+    </i>
+  </a>
+</div>
+</div>
