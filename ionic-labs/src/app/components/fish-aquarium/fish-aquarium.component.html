@@ -1,0 +1,51 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      {{title}}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="floating">
+        Number
+      </ion-label>
+      <ion-input type="number" [(ngModel)]="fishAquarium.numb" name="numb">
+
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Form
+      </ion-label>
+      <ion-input [(ngModel)]="fishAquarium.form" type="text" name="form">
+
+      </ion-input>
+
+    </ion-item>
+    <ion-item>
+    <ion-label position="floating">
+      Size
+    </ion-label>
+    <ion-input [(ngModel)]="fishAquarium.size" type="number" name="size">
+
+    </ion-input>
+
+
+  </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Is Back Light
+      </ion-label>
+      <ion-input [(ngModel)]="fishAquarium.isBackLight" type="boolean" name="isBackLight">
+
+      </ion-input>
+    </ion-item>
+    <ion-button *ngIf="isNew" color="primary" (click)="addNew()">
+      <ion-icon slot="start" name="add-circle"></ion-icon>
+      Add
+    </ion-button>
+    <ion-button *ngIf="isNew" color="danger" class="ion-float-right" (click)="cancelAdding()">
+      <ion-icon slot="start" name="close"></ion-icon>Cancel
+    </ion-button>
+  </ion-card-content>
+</ion-card>
