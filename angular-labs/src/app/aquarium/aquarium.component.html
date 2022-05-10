@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col m3 s6 offset-m3 center-align">
+    <h5>{{aquarium.number}}</h5>
+  </div>
+  <div class="col m3 s6 center-align">
+    <a class="btn-floating waves-effect waves-light blue" (click)="showInfo=!showInfo">
+      <i *ngIf="showInfo" class="material-icons">
+        keyboard_arrow_up
+      </i>
+      <i *ngIf="!showInfo" class="material-icons">
+        keyboard_arrow_down
+      </i>
+
+    </a>
+    <a [routerLink]="'/fishs/'+aquarium.number" class="btn-floating waves-effect waves-light blue-grey" >
+      <i class="material-icons">
+        view_headline
+      </i>
+    </a>
+  </div>
+
+  <div class="row info" *ngIf="showInfo">
+    <div >
+
+        <input id="number" [ngModel]="aquarium.number" type="text" class="validate">
+
+    </div>
+    <div >
+
+        <input id="form" [ngModel]="aquarium.form" type="text" class="validate">
+
+    </div>
+    <div >
+
+        <input id="size" [ngModel]="aquarium.size" type="text" class="validate">
+
+
+    </div>
+    <div class="col m6 offset-m3 s12">
+
+        <input id="isBackLight" [ngModel]="aquarium.isBackLight" type="text" class="validate">
+
+    </div>
+    <a class="rem-row btn-floating waves-effect waves-light red" (click)="delAquarium()">
+
+        delete
+    </a>
+  </div>
+</div>
