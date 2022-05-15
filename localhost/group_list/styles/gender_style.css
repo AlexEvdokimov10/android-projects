@@ -1,0 +1,9 @@
+tr.student_boy{
+	background-color: #add8e6;
+}
+tr.student_girl{
+	background-color: #ffc0cb;
+}
+tr.student_girl,tr.student_boy{
+	text-align:center;
+}

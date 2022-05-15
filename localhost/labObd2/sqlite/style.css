@@ -1,0 +1,18 @@
+table.autopark-list td, table.autopark-list tr{
+    border: solid 2px black;
+    padding: 5px;
+}
+table.autopark-list th{
+    background-color: lightgray;
+}
+table.autopark-list th.id, table.autopark-list td.id{
+    width: 50px;
+    text-align: centr;
+}
+table.autopark-list th.name, table.autopark-list td.name{
+    width: 200px;
+}
+form[name='add-disease-name']{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
